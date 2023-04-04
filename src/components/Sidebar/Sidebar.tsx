@@ -33,7 +33,7 @@ export default function Sidebar() {
           <Avatar size="large">
             L
           </Avatar>
-          <h3>Life</h3>
+          <h4>John Doe</h4>
         </Chat>
       </Chats>
     </Container>
@@ -89,5 +89,9 @@ const Chat = styled.div`
 
   :hover {
     background-color: #f0f2f5;
+  }
+
+  > h4 {
+    font-weight: 600;
   }
 `;

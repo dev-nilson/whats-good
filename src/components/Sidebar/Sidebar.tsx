@@ -42,11 +42,16 @@ export default function Sidebar() {
 
 const Container = styled.div`
   width: 350px;
+  border-right: 1px solid #e9edef;
 `;
 
 const IconsContainer = styled.div`
   display: flex;
   gap: 25px;
+
+  > svg {
+    cursor: pointer;
+  }
 `;
 
 const Header = styled.div`
@@ -56,6 +61,7 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  border-bottom: 1px solid #e9edef;
 `;
 
 const Search = styled.div`
@@ -85,6 +91,7 @@ const Chat = styled.div`
   gap: 15px;
   padding: 15px;
   background-color: #fff;
+  border-top: 1px solid #e9edef;
   cursor: pointer;
 
   :hover {
@@ -92,6 +99,6 @@ const Chat = styled.div`
   }
 
   > h4 {
-    font-weight: 600;
+    font-weight: 500;
   }
 `;

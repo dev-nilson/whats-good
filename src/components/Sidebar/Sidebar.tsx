@@ -28,6 +28,14 @@ export default function Sidebar() {
         </svg>
         <SearchInput placeholder="Search" />
       </Search>
+      <Chats>
+        <Chat>
+          <Avatar size="large">
+            L
+          </Avatar>
+          <h3>Life</h3>
+        </Chat>
+      </Chats>
     </Container>
   );
 }
@@ -68,4 +76,18 @@ const SearchInput = styled.input`
   outline-width: 0;
   border: none;
   flex: 1;
+`;
+
+const Chats = styled.div``;
+
+const Chat = styled.div`
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+
+  :hover {
+    background-color: #f0f2f5;
+  }
 `;

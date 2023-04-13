@@ -1,6 +1,9 @@
 import Head from "next/head";
 import { Poppins } from "next/font/google";
+import styled from "styled-components";
 import Sidebar from "@/components/Sidebar/Sidebar";
+import Chat from "@/components/Chat/Chat";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -16,8 +19,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={poppins.className}>
-        <Sidebar />
+        <HomeLayout>
+          <Sidebar />
+          <Chat />
+        </HomeLayout>
       </main>
     </>
   );
 }
+
+const HomeLayout = styled.div`
+  display: flex;
+  height: 100vh;
+`;

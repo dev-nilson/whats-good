@@ -1,9 +1,10 @@
+import { useState } from "react";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
 import styled from "styled-components";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import Chat from "@/components/Chat/Chat";
-
+import Billboard from "@/components/Billboard/Billboard";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,6 +12,8 @@ const poppins = Poppins({
 });
 
 export default function Home() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -20,8 +23,8 @@ export default function Home() {
       </Head>
       <main className={poppins.className}>
         <HomeLayout>
-          <Sidebar />
-          <Chat />
+          <Sidebar openChat={setIsChatOpen} />
+          {isChatOpen ? <Chat /> : <Billboard />}
         </HomeLayout>
       </main>
     </>

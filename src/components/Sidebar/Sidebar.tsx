@@ -37,6 +37,14 @@ export default function Sidebar({ openChat }: SidebarProps) {
           <Avatar size="large">JD</Avatar>
           <h4>John Doe</h4>
         </Chat>
+        <Chat onClick={() => openChat(true)}>
+          <Avatar size="large">JD</Avatar>
+          <h4>John Doe</h4>
+        </Chat>
+        <Chat onClick={() => openChat(true)}>
+          <Avatar size="large">JD</Avatar>
+          <h4>John Doe</h4>
+        </Chat>
       </Chats>
     </Container>
   );
@@ -86,21 +94,23 @@ const SearchInput = styled.input`
   flex: 1;
 `;
 
-const Chats = styled.div``;
+const Chats = styled.div`
+  border-top: 1px solid #e9edef;
+`;
 
 const Chat = styled.div`
   display: flex;
   gap: 15px;
   padding: 15px;
   background-color: #fff;
-  border-top: 1px solid #e9edef;
+  border-bottom: 1px solid #e9edef;
   cursor: pointer;
 
   :hover {
-    background-color: #f0f2f5;
+    background-color: #f5f6f6;
   }
 
   > h4 {
-    font-weight: 500;
+    font-weight: 400;
   }
 `;
